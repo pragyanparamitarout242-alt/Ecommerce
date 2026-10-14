@@ -1,15 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project</title>
-    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homenest – Discover a place you'll love to live</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <!-- Here is Start My Navbar -->
-     <nav class="navbar">
 
-     </nav>
+<body>
+
+    <header class="site-header">
+        <nav></nav>
+        <div class="wrap nav">
+            <a href="#top" class="logo">Home<span>nest</span></a>
+            <nav class="links" id="links" aria-label="Main">
+                <a href="#homes">Homes</a><a href="#cities">Cities</a><a href="#why">Why us</a><a
+                    href="#best">Properties</a><a href="#news">News</a>
+            </nav>
+            <div class="nav-right">
+                <button class="cart" id="cartBtn" aria-label="Cart">Cart (<span id="count">0</span>)</button>
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <span class="pill">Let us guide your home</span>
+                <h1 style="color: white; text-align: center;">Discover a place you'll love to live</h1> -->
+                <div class="tabs" role="tablist">
+                    <button class="tab active" role="tab" aria-selected="true">Sale</button>
+                    <button class="tab" role="tab" aria-selected="false">Rent</button>
+                </div>
+                <form class="search" onsubmit="event.preventDefault();toast('Searching homes…')">
+                    <input type="text" placeholder="Enter name, keywords…" aria-label="Search homes">
+                    <button type="submit" class="search-btn" aria-label="Search">&#9906;</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- HOMES FOR YOU -->
+        <section class="light" id="homes">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2>Homes for you</h2>
+                    <p>Based on your view history</p>
+                </div>
+                <div class="slider-wrap">
+                    <button class="arrow" id="prev" aria-label="Previous">&#8249;</button>
+                    <div class="slider" id="slider">
+                        <article class="home-card">
+                            <div class="photo"><img src="./assest/image 2.jpeg"
+                                    alt="Kitchen with white brick walls"><span class="badge dark">For sale</span></div>
+                            <div class="info">
+                                <div class="row">
+                                    <h3>Skyper Pool Apartment</h3><span class="price">$280,000</span>
+                                </div>
+                                <p class="addr">1020 Bloomingdale Ave</p>
+                                <p class="specs"><span>4 Beds</span><span>2 Baths</span><span>450 sqft</span></p>
+                                <button class="add" data-n="Skyper Pool Apartment">Add to cart</button>
+                            </div>
+                        </article>
+                        <article class="home-card">
+                            <div class="photo"><img src="./assest/image 3.jpeg"
+                                    alt="Covered patio with garden"><span class="badge dark">For rent</span></div>
+                            <div class="info">
+                                <div class="row">
+                                    <h3>North Dillard Street</h3><span class="price">$250<small>/month</small></span>
+                                </div>
+                                <p class="addr">4330 Bell Shoals Rd</p>
+                                <p class="specs"><span>4 Beds</span><span>2 Baths</span><span>400 sqft</span></p>
+                                <button class="add" data-n="North Dillard Street">Add to cart</button>
+                            </div>
+                        </article>
+                        <article class="home-card">
+                            <div class="photo"><img src="./assest/image 4.jpeg" alt="Penthouse living room"><span
+                                    class="badge dark">For sale</span><span class="badge gold two">Featured</span></div>
+                            <div class="info">
+                                <div class="row">
+                                    <h3>Eaton Garth Penthouse</h3><span class="price">$180,000</span>
+                                </div>
+                                <p class="addr">7722 18th Ave, Brooklyn</p>
+                                <p class="specs"><span>4 Beds</span><span>2 Baths</span><span>450 sqft</span></p>
+                                <button class="add" data-n="Eaton Garth Penthouse">Add to cart</button>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="arrow" id="next" aria-label="Next">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CITIES -->
+        <section class="dark" id="cities">
+            <div class="wrap">
+                <div class="sec-head light-text">
+                    <h2>Properties in these cities</h2>
+                    <p>Explore the places buyers are searching most.</p>
+                </div>
+                <div class="cities">
+                    <a href="#homes" class="city wide"><img src="./assest/image 10.jpeg" alt="New York skyline">
+                        <div><small>8 Properties</small><strong>New York</strong></div>
+                    </a>
+                    <a href="#homes" class="city"><img src="./assest/image 11.jpeg" alt="Chicago bridge and skyline">
+                        <div><small>2 Properties</small><strong>Chicago</strong></div>
+                    </a>
+                    <a href="#homes" class="city"><img src="./assest/image 12.jpeg" alt="Los Angeles highway">
+                        <div><small>1 Property</small><strong>Los Angeles</strong></div>
+                    </a>
+                    <a href="#homes" class="city"><img src="./assest/image 13.jpeg" alt="San Diego bridge">
+                        <div><small>0 Properties</small><strong>San Diego</strong></div>
+                    </a>
+                    <a href="#homes" class="city"><img src="./assest/image 14.jpeg" alt="Florida waterfront">
+                        <div><small>3 Properties</small><strong>Florida</strong></div>
+                    </a>
+                    <a href="#homes" class="city wide"><img src="./assest/image 15.jpeg" alt="Miami beach">
+                        <div><small>2 Properties</small><strong>Miami</strong></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="why" id="why">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2>Why choose us</h2>
+                    <p>Buying or renting should feel simple and clear.</p>
+                </div>
+                <div class="feats">
+                    <div class="feat"><svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M6 24 24 8l18 16M10 22v20h28V22" />
+                            <circle cx="22" cy="28" r="5" />
+                            <path d="m26 32 6 6" />
+                        </svg>
+                        <h3>Find your future home</h3>
+                        <p>We help you find a new home by offering a smart real estate experience</p>
+                    </div>
+                    <div class="feat"><svg viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="14" cy="12" r="5" />
+                            <path d="M8 40V24h12v16M20 28l16-14 8 8v18H20" />
+                            <path d="M30 40V30h6v10" />
+                        </svg>
+                        <h3>Experienced agents</h3>
+                        <p>Find an experienced agent who knows your market best</p>
+                    </div>
+                    <div class="feat"><svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M8 26 24 12l16 14M12 24v18h24V24" />
+                            <path d="M21 42V32h6v10" />
+                            <circle cx="12" cy="10" r="6" />
+                            <path d="M12 7v6" />
+                        </svg>
+                        <h3>Buy or rent homes</h3>
+                        <p>Millions of houses and apartments in your favourite cities</p>
+                    </div>
+                    <div class="feat"><svg viewBox="0 0 48 48" aria-hidden="true">
+                            <rect x="6" y="8" width="36" height="26" rx="2" />
+                            <path d="M18 42h12M24 34v8" />
+                            <path d="m12 22 8-7 8 7v8H12z" />
+                            <path d="M33 14v10" />
+                        </svg>
+                        <h3>List your own property</h3>
+                        <p>Sign up now and sell or rent your own properties</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST PROPERTIES -->
+        <section class="dark" id="best">
+            <div class="wrap">
+                <div class="sec-head light-text">
+                    <h2>Best properties</h2>
+                    <p>Hand-picked homes loved by our clients.</p>
+                </div>
+                <div class="best">
+                    <div class="b-living"><img src="./assest/image 16.jpeg" alt="Bright living room with plants"></div>
+                    <div class="b-stat"><b>280+</b><span>Properties</span>
+                        <p>Explore our wide variety of properties to find your dream home today</p><a href="#homes"
+                            class="circle" aria-label="See homes">&rarr;</a>
+                    </div>
+                    <div class="b-small"><img src="./assest/image 17.jpeg" alt="Cozy sofa with plants"><span
+                            class="play" aria-hidden="true">&#9654;</span></div>
+                    <article class="b-villa">
+                        <img src="./assest/image 18.jpeg" alt="Modern white villa with palm trees">
+                        <div class="tags"><span class="badge dark">For sale</span><span
+                                class="badge gold">Featured</span></div>
+                        <div class="villa-info">
+                            <h3>Villa One Hyde Park</h3>
+                            <p>2050 Bloomingdale Ave</p>
+                            <div class="row"><b>$120,000</b><span
+                                    class="specs"><span>4</span><span>2</span><span>350</span></span></div>
+                            <button class="add light" data-n="Villa One Hyde Park">Add to cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section class="green-wrap">
+            <div class="green">
+                <div class="agents">
+                    <img src="./assest/image 5.jpeg" alt="Agent handing keys to a smiling couple">
+                    <div class="clients"><i>&#9786;</i><span>Total Clients<b>7,000 M</b></span></div>
+                </div>
+                <div class="exp">
+                    <h2>Local expertise for luxury homes</h2>
+                    <p>Our agents handle premium properties every day, from private viewings to the final signature.</p>
+                    <a href="#footer" class="btn">Learn more &rarr;</a>
+                </div>
+                <div class="stats">
+                    <div><b>$18M</b><span>Owned from property transactions</span></div>
+                    <div><b>26K</b><span>Properties for buy</span></div>
+                    <div><b>15K</b><span>Properties for sell</span></div>
+                    <div><b>800</b><span>Daily completed transactions</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AGENT BANNER -->
+        <section class="banner">
+            <div class="wrap banner-in">
+                <div>
+                    <h2>Become a real estate agent</h2>
+                    <p>We only work with the best companies around the globe</p>
+                </div>
+                <a href="#footer" class="btn">Register now &rarr;</a>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section class="light" id="news">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2>Recent articles &amp; news</h2>
+                    <p>Tips and market updates from our team.</p>
+                </div>
+                <div class="news">
+                    <article class="news-card"><img src="./assest/image 6.jpeg" alt="Modern living room">
+                        <div><small>Apartment &bull; March 19, 2024</small>
+                            <h3>Housing markets that changed the most this week</h3><a href="#news">Read more &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card"><img src="./assest/image 7.jpeg" alt="Classic villa">
+                        <div><small>Apartment &bull; March 19, 2024</small>
+                            <h3>Unveiling the best Canadian cities for biking</h3><a href="#news">Read more &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card"><img src="./assest/image 8.jpeg" alt="Orange leather sofa">
+                        <div><small>Office &bull; March 19, 2024</small>
+                            <h3>10 walkable cities where you can live affordably</h3><a href="#news">Read more
+                                &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card"><img src="./assest/image 9.jpeg" alt="Modern house with palm trees">
+                        <div><small>Shop &bull; March 19, 2024</small>
+                            <h3>New apartment nice in the best Canadian cities</h3><a href="#news">Read more &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="wrap">
+            <div class="fgrid">
+                <div><a href="#top" class="logo">Home<span>nest</span></a>
+                    <p>Verified homes, local agents and simple online reservations.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#homes">Homes</a></li>
+                        <li><a href="#cities">Cities</a></li>
+                        <li><a href="#news">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#why">Why us</a></li>
+                        <li><a href="#best">Properties</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get listing alerts</h4>
+                    <form class="sub" onsubmit="event.preventDefault();toast('You are subscribed');this.reset()"><input
+                            type="email" required placeholder="Email address" aria-label="Email"><button class="btn"
+                            type="submit">Join</button></form>
+                </div>
+            </div>
+            <div class="copy"><span>&copy; 2026 Homenest. All rights reserved.</span><span>Privacy &middot; Terms</span>
+            </div>
+        </div>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        var cart = [], te = document.getElementById('toast'), tt;
+        function toast(m) { te.textContent = m; te.classList.add('show'); clearTimeout(tt); tt = setTimeout(function () { te.classList.remove('show') }, 2200) }
+        function sync() { document.getElementById('count').textContent = cart.length }
+        document.querySelectorAll('.add').forEach(function (b) {
+            b.addEventListener('click', function () {
+                var n = b.dataset.n, i = cart.indexOf(n);
+                if (i < 0) { cart.push(n); b.textContent = 'Added'; toast(n + ' added to cart') }
+                else { cart.splice(i, 1); b.textContent = 'Add to cart'; toast(n + ' removed') }
+                sync()
+            })
+        });
+        document.getElementById('cartBtn').addEventListener('click', function () { toast(cart.length ? cart.join(', ') : 'Your cart is empty') });
+        document.querySelectorAll('.tab').forEach(function (t) {
+            t.addEventListener('click', function () {
+                document.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-selected', 'false') });
+                t.classList.add('active'); t.setAttribute('aria-selected', 'true')
+            })
+        });
+        var sl = document.getElementById('slider');
+        document.getElementById('prev').addEventListener('click', function () { sl.scrollBy({ left: -sl.clientWidth * .8, behavior: 'smooth' }) });
+        document.getElementById('next').addEventListener('click', function () { sl.scrollBy({ left: sl.clientWidth * .8, behavior: 'smooth' }) });
+        var mb = document.getElementById('menuBtn'), lk = document.getElementById('links');
+        mb.addEventListener('click', function () { var o = lk.classList.toggle('open'); mb.setAttribute('aria-expanded', o) });
+        lk.addEventListener('click', function (e) { if (e.target.tagName === 'A') { lk.classList.remove('open'); mb.setAttribute('aria-expanded', false) } });
+    </script>
 </body>
+
 </html>
